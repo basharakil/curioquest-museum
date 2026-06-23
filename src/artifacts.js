@@ -25,7 +25,16 @@ export const artifacts = [
     curator: "Iris Wen",
     risk: "high",
     summary: "A blue door leading to a library where every book is written in weather."
-  }
+  },
+  {
+id: "lantern-of-lost-mondays",
+title: "Lantern of Lost Mondays",
+category: "relic",
+status: "on-display",
+curator: "Samira Fox",
+risk: "low",
+summary: "A brass lantern that returns one missing hour to anyone who reads beside it."
+}
 ];
 
 export const allowedCategories = ["relic", "creature", "portal"];
