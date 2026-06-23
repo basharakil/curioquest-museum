@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CurioQuest Museum</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Main navigation">
+        <strong>CurioQuest</strong>
+        <a href="#collection">Collection</a>
+        <a href="#ops">Operations</a>
+      </nav>
+      <section class="hero__content">
+        <p class="eyebrow">Digital museum of impossible artifacts</p>
+        <h1>Explore exhibits that should not exist.</h1>
+        <p class="hero__text">
+          Track fictional artifacts, curator notes, and exhibit status while learning a real GitHub workflow.
+        </p>
+      </section>
+    </header>
+
+    <main>
+      <section id="collection" class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Collection</p>
+          <h2>Artifact catalog</h2>
+          <p>Use the filters to check which artifacts are ready for visitors.</p>
+        </div>
+
+        <div class="filters" aria-label="Artifact filters">
+          <button class="filter-button is-active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="relic">Relics</button>
+          <button class="filter-button" data-filter="creature">Creatures</button>
+          <button class="filter-button" data-filter="portal">Portals</button>
+        </div>
+
+        <div id="artifact-grid" class="grid" aria-live="polite"></div>
+      </section>
+
+      <section id="ops" class="panel panel--accent">
+        <p class="eyebrow">Museum operations</p>
+        <h2>Release goal</h2>
+        <p>
+          Your team must improve this site, protect the main branch, run CI checks, and deploy safely to GitHub Pages.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>CurioQuest training app - built with GitHub workflows.</p>
+    </footer>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
