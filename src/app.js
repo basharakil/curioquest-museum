@@ -24,7 +24,7 @@ function renderArtifacts(category = "all") {
     : artifacts.filter((artifact) => artifact.category === category);
 
   if (visibleArtifacts.length === 0) {
-    grid.innerHTML = `<div class="empty-state">No artifacts match this filter yet.</div>`;
+    grid.innerHTML = `<div class="empty-state">No artifacts match this filter yet. Tryanother category or add a new exhibit through a pull request.</div>`;
     return;
   }
 
