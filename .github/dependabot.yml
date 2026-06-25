@@ -1,11 +1,10 @@
-## What changed?
--
-## Why does this matter?
--
-## Validation
-- [ ] `npm run lint`
-- [ ] `npm test`
-- [ ] `npm run build`
-- [ ] `npm run validate:dist`
-## Screenshots or notes
--
+version: 2
+updates:
+- package-ecosystem: "npm"
+directory: "/"
+schedule:
+interval: "weekly"
+- package-ecosystem: "github-actions"
+directory: "/"
+schedule:
+interval: "weekly"
