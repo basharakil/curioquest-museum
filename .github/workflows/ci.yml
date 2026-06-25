@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Lint, test, and build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository # download repo files into the runner
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js # install the Node runtime for npm commands
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22 # match the lab runtime
+          cache: npm # speed up dependency installs
+
+      - name: Install dependencies # install exact versions from package-lock.json
+        run: npm ci
+
+      - name: Run lint checks # check code style and basic mistakes
+        run: npm run lint
+
+      - name: Run tests # run automated project tests
+        run: npm test
+
+      - name: Build site # create production files in dist
+        run: npm run build
+
+      - name: Validate build output # confirm dist contains expected files
+        run: npm run validate:dist
